@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM Plex Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="section-banner">
+        <div id="banner">
+          <img
+            id="banner-image"
+            src="imgs/lassonde_pattern_1.svg"
+            alt="Lassonde colours banner"
+          />
+        </div>
+
+        <div id="logo-lassonde">
+          <img
+            id="lassonde-logo-image"
+            src="imgs/lassondeLogo.svg"
+            alt="Lassonde logo"
+          />
+        </div>
+      </div>
+      <div class="section-title">
+        <div class="title">
+          Want to build a visual calendar for your course?
+        </div>
+        <div class="sub-title">
+          Use this tool to build your visual calendar and easily transfer it to
+          eClass.
+        </div>
+      </div>
+      <div id="section-instructions">
+        <div id="instruction-1-title">
+          <img
+            src="imgs/instruction1Icon.svg"
+            alt=""
+            id="instruction-1-title-img"
+          />
+          <div>Creating your calendar:</div>
+        </div>
+        <div id="instruction-1-accordian">
+          <button class="accordion">Add Event</button>
+          <div class="panel">
+            <ol>
+              <li>
+                Click the tile next to the week, under the day where you would
+                like to add a course event
+              </li>
+              <li>
+                Select the type of event you want to add by clicking on the
+                "event type" drop down menu
+              </li>
+              <li>
+                If you want the event to repeat weekly change the option from
+                "Don't Repeat" to "Repeat Weekly" in the "recurring event" drop
+                down menu
+              </li>
+              <li>Click the "Save" button to add your event</li>
+            </ol>
+
+            <p class="note">
+              Note: If you refresh this page while you are building the
+              calendar, you will lose your progress.
+            </p>
+          </div>
+
+          <button class="accordion">Delete Event</button>
+          <div class="panel">
+            <ol>
+              <li>
+                Click the tile next to the week, under the day where you would
+                like to delete a course event
+              </li>
+              <li>
+                Select the course event you wish to delete from the ‘event type’
+                drop down menu
+              </li>
+              <li>Click on “Delete selected event”</li>
+            </ol>
+
+            <p class="note">
+              Note: You can use the “Delete all” button to clear all events for
+              the selected day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <!-- put CSS Styles into eClass 
+              <script type="text/javascript">
+                // <![CDATA[
+                var cssRules = "#main { display: flex; justify-content: center; } #app { display: grid; width: 100%; margin-left: 10%; margin-right: 10%; margin-bottom: 10%; grid-template-columns: 5rem repeat(7, 21rem); grid-template-rows: 5rem repeat(12, 21rem); } /*DAY/WEEK/CONTENT TILE STYLES*/ .day-tile { background-color: #2f2f2f; color: #ffffff; font-size: 2.4rem; text-align: center; width: 20rem; height: 4rem; border-radius: 10px; } .week-tile { background-color: #2f2f2f; color: #ffffff; font-size: 2.4rem; width: 4rem; height: 20rem; border-radius: 10px; } .week-tile-text { position: relative; display: inline-block; width: 10rem; top: 38%; right: 76%; transform: rotate(-90deg); } .content-tile { background-color: #d9d9d9; color: #ffffff; font-size: 2.4rem; width: 20rem; height: 20rem; cursor: pointer; } /*EVENT STYLES*/ .event { margin: 0.5rem 0.5rem 0.75rem 0.5rem; width: 19rem; display: flex; border-radius: 2.5px; font-size: 1.8rem; } .event-content { width: 14rem; margin-left: 0.25rem; } .symbol-wrapper { width: 3rem; height: 3rem; margin: 0.25rem; } .symbol { width: 100%; height: 100%; } .lecture { background-color: #1b3663; } .assessment { background-color: #00757e; } .lab-tutorial { background-color: #9c3464; } .office-hours { background-color: #0a7a35; } .quiz, .midterm, .final-exam { background-color: #cc3333; } .project-due { background-color: #ffcc00; color: black; } .other { background-color: #4e4c4c; }";
+                var styleElement = document.createElement("style");
+                styleElement.appendChild(document.createTextNode(cssRules));
+                document.getElementsByTagName("head")[0].appendChild(styleElement);
+                // ]]>
+              </script> 
+      -->
+
+      <div id="app">
+        <div class="padding-tile"></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="instruction-2-title">
+        <img
+          src="imgs/instruction2Icon.svg"
+          alt=""
+          id="instruction-2-title-img"
+        />
+        <div>Transfering your visual calendar to eClass:</div>
+      </div>
+
+      <div id="instruction-2-wrapper">
+        <div id="instruction-2">
+          <div id="instruction-2-content">
+            <p class="instruction-2-text">
+              You can display this visual calendar anywhere in your eClass
+              course.
+            </p>
+
+            <p class="instruction-2-text" id="instruction-2-note">
+              If you are using Lassonde’s eClass template, you can display your
+              visual calendar in the course schedule page.
+            </p>
+
+            <p class="instruction-2-text">
+              You can paste the HTML code anywhere in eclass by toggling to the
+              html view in the text editor
+            </p>
+
+            <ol class="inside-list" id="instruction-2-list">
+              <li class="inside-list-item">
+                In the eClass text editor, click on the drop down arrow to
+                expand your editing options
+              </li>
+              <li class="inside-list-item">Switch to HTML mode</li>
+              <li class="inside-list-item">Paste in your code</li>
+              <li class="">Click "Save and display"</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div id="instruction-gif">
+        <div id="gif-container">
+          <img
+            id="gif"
+            src="imgs/GIF_Instructions.mp4.gif"
+            alt="gif of instructions"
+          />
+        </div>
+      </div>
+      <div id="html-copier">
+        <textarea
+          id="text-area"
+          readonly
+          rows="20"
+          cols="100"
+          style="resize: none"
+        >
+        </textarea>
+        <button
+          class="button"
+          id="copy-HTML-button"
+          onclick="copyToClipboard()"
+        >
+          Copy to Clipboard
+        </button>
+      </div>
+    </div>
+
+    <div id="modal-container">
+      <div id="modal-backdrop"></div>
+
+      <div class="modal" id="options-modal">
+        <h2 class="modal-title">Options</h2>
+        <p id="options-event-modal-subtitle">Select:</p>
+        <div id="option-buttons-container">
+          <button
+            class="button"
+            class="option-buttons"
+            id="new-event-modal-button"
+          >
+            Create new event
+          </button>
+          <button
+            class="button"
+            class="option-buttons"
+            id="delete-event-modal-button"
+          >
+            Delete existing event
+          </button>
+          <button class="button" class="option-buttons" id="cancel-button-1">
+            Cancel
+          </button>
+        </div>
+      </div>
+
+      <div class="modal" id="create-event-modal">
+        <p id="create-event-modal-title">New Event</p>
+        <p class="create-event-modal-subtitle">Select event category:</p>
+
+        <select
+          class="selector"
+          id="create-event-modal-category-selector"
+          name="category-selector"
+          onchange="updateAddEventSelector()"
+        >
+          <option value="lecture">Lecture</option>
+          <option value="assessment">Assessment</option>
+          <option value="lab-tutorial">Lab/Tutorial</option>
+        </select>
+
+        <p class="create-event-modal-subtitle">Select event:</p>
+        <select
+          class="selector"
+          id="create-event-modal-event-selector"
+          name="event-selector"
+        >
+          <option value="1">in-person lecture</option>
+          <option value="1">remote lecture</option>
+          <option value="1">hyflex lecture</option>
+        </select>
+
+        <p class="create-event-modal-subtitle">Select Occurence Type:</p>
+        <select
+          class="selector"
+          id="create-event-modal-occurence-selector"
+          name="occurence-selector"
+        >
+          <option value="0">Don't repeat</option>
+          <option value="1">Repeat weekly</option>
+        </select>
+
+        <div>
+          <button class="button" id="add-event-button" onclick="addEvent()">
+            Add
+          </button>
+          <button class="button" id="cancel-button-2">Cancel</button>
+        </div>
+      </div>
+
+      <div class="modal" id="delete-event-modal">
+        <h2 class="modal-title" id="delete-event-modal-title">
+          Select the event you would like to delete:
+        </h2>
+
+        <form>
+          <select class="selector" id="delete-event-selector"></select>
+        </form>
+
+        <p class="delete-event-modal-subtitle">
+          Would you like to delete this and reoccuring events?
+        </p>
+        <form>
+          <select class="selector" id="delete-event-occurence-selector">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </form>
+
+        <button
+          class="button"
+          class="delete-modal-buttons"
+          id="delete-button"
+          onclick="deleteEvent()"
+        >
+          Delete Selected Event
+        </button>
+
+        <button
+          class="button"
+          class="delete-modal-buttons"
+          id="delete-all-button"
+          onclick="deleteAllEvents()"
+        >
+          Delete All
+        </button>
+
+        <button class="button" class="delete-modal-buttons" id="close-button">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

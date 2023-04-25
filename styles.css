@@ -1,0 +1,487 @@
+/*==============================================================================*/
+/*ELEMENT STYLES*/
+/*==============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*Makes 1rem equal to 10px, easier to size text*/
+}
+
+body {
+  font-size: 1rem; /* 10px */
+  font-family: "IBM Plex Sans";
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*==============================================================================*/
+/*HEADER STYLES*/
+/*==============================================================================*/
+#header {
+  width: 100%;
+}
+/*BANNER STYLES*/
+#section-banner {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+#banner {
+  width: 100%;
+  z-index: 0;
+}
+#banner-image {
+  width: 100%;
+}
+#logo-lassonde {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+#lassonde-logo-image {
+  width: 35%;
+}
+/*HEADER TITLE STYLES*/
+.section-title {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 6.4rem;
+  line-height: 6.5rem;
+  margin-bottom: 1rem;
+}
+.sub-title {
+  font-size: 3.6rem;
+}
+/*INSTRUCTION STYLES*/
+.section-instructions {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 10rem;
+}
+#instruction-1-title {
+  font-size: 3.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+#instruction-1-title-img {
+  margin-right: 1rem;
+}
+#instruction-1-title-img {
+  font-size: 3.6rem;
+}
+
+#instruction-1-accordian{
+  margin-bottom: 7.5rem;
+}
+
+.accordion {
+  background-color: #e2e2e2;
+  color: #000000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 3.6rem;
+  transition: 0.4s;
+}
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.panel {
+  font-size: 2.4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.note {
+  color: #0000ff;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/*==============================================================================*/
+/*MAIN STYLES*/
+/*==============================================================================*/
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+#app {
+  display: grid;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  grid-template-columns: 5rem repeat(7, 21rem);
+  grid-template-rows: 5rem repeat(12, 21rem);
+}
+
+/*DAY/WEEK/CONTENT TILE STYLES*/
+.day-tile {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-align: center;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 10px;
+}
+.week-tile {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  font-size: 2.4rem;
+  width: 4rem;
+  height: 20rem;
+  border-radius: 10px;
+}
+.week-tile-text {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  top: 38%;
+  right: 76%;
+  transform: rotate(-90deg);
+}
+.content-tile {
+  background-color: #d9d9d9;
+  color: #ffffff;
+  font-size: 2.4rem;
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
+}
+
+/*EVENT STYLES*/
+.event {
+  margin: 0.5rem 0.5rem 0.75rem 0.5rem;
+  width: 19rem;
+  display: flex;
+  border-radius: 2.5px;
+  font-size: 1.8rem;
+}
+.event-content {
+  width: 14rem;
+  margin-left: 0.25rem;
+}
+.symbol-wrapper {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.25rem;
+}
+.symbol {
+  width: 100%;
+  height: 100%;
+}
+.lecture {
+  background-color: #1b3663;
+}
+.assessment {
+  background-color: #00757e;
+}
+.lab-tutorial {
+  background-color: #9c3464;
+}
+.office-hours {
+  background-color: #0a7a35;
+}
+.quiz,
+.midterm,
+.final-exam {
+  background-color: #cc3333;
+}
+.project-due {
+  background-color: #ffcc00;
+  color: black;
+}
+.other {
+  background-color: #4e4c4c;
+}
+
+/*==============================================================================*/
+/*MODAL STYLES*/
+/*==============================================================================*/
+#modal-backdrop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  display: block;
+  background-color: #2f2f2f;
+  width: 100rem;
+  height: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 3;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*CREATE EVENT MODAL STYLES*/
+#create-event-modal {
+  display: none;
+}
+#create-event-modal-title {
+  font-size: 6.4rem;
+}
+.create-event-modal-subtitle {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+.selector{
+  font-size: 3.6rem;
+  background-color: #e2e2e2;
+  color: rgb(0, 0, 0);
+  width: 30rem;
+  height: 5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+#create-event-modal-category-selector {
+  font-size: 3.6rem;
+  background-color: #e2e2e2;
+  color: rgb(0, 0, 0);
+  width: 30rem;
+  height: 5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+#create-event-modal-event-selector {
+  font-size: 3.6rem;
+  background-color: #e2e2e2;
+  color: rgb(0, 0, 0);
+  width: 30rem;
+  height: 5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+
+/*OPTIONS MODAL STYLES*/
+#options-modal {
+  display: none;
+}
+#options-event-modal-subtitle {
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+#option-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+#new-event-modal-button {
+  vertical-align: top;
+}
+#delete-event-modal-button {
+  vertical-align: top;
+}
+#cancel-button-1 {
+  vertical-align: top;
+  background-color: #cc3333;
+  color: white;
+}
+
+/*SAVE EVENT MODAL STYLES*/
+#save-event-modal {
+  display: none;
+}
+.modal-title {
+  font-size: 6.4rem;
+}
+.save-event-modal-subtitle {
+  font-size: 4rem;
+  margin-bottom: 0rem;
+}
+.drop-down-selector {
+  width: 31rem;
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+#selector-dropdowns {
+  display: flex;
+  justify-content: left;
+}
+#event-selection-container {
+  margin-left: 20rem;
+  display: none;
+}
+#event-label-input {
+  display: none;
+}
+.button {
+  width: 25rem;
+  height: 10rem;
+  font-size: 3.2rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+#cancel-button-2 {
+  background-color: #cc3333;
+  color: white;
+}
+
+/*DELETE EVENT MODAL STYLES*/
+#delete-event-modal {
+  display: none;
+}
+#delete-event-modal-title {
+  width: 60rem;
+  margin-bottom: 2rem;
+}
+.delete-event-modal-subtitle {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+#delete-button {
+  vertical-align: top;
+}
+#delete-all-button {
+  vertical-align: top;
+}
+#close-button {
+  vertical-align: top;
+  background-color: #cc3333;
+  color: white;
+}
+
+/*==============================================================================*/
+/*FOOTER STYLES*/
+/*==============================================================================*/
+
+/*INSTRUCTION STYLES*/
+.section-instructions {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 10rem;
+}
+#instruction-2-title {
+  font-size: 3.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 2.5rem;
+}
+#instruction-2-title-img {
+  margin-right: 1rem;
+}
+#instruction-2-title-img {
+  font-size: 3.6rem;
+}
+
+#instruction-2-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  height: 55rem;
+  margin-right: 5rem;
+  margin-bottom: 10rem;
+}
+#instruction-2 {
+  background-color: #e2e2e2;
+  width: 100%;
+  height: 100%;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: left;
+  border-radius: 10px;
+}
+#instruction-2-content {
+  font-size: 3.2rem;
+}
+.instruction-2-text {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+#instruction-2-note {
+  color: #0000ff;
+  font-style: italic;
+}
+#instruction-2-list {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+#instruction-gif {
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 40rem;
+}
+#gif-container {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  margin-top: 2rem;
+  align-content: center;
+  justify-content: center;
+}
+#gif {
+  width: 95%;
+}
+
+/*COPY TO CLIPBOARD SECTION STYLES*/
+#text-area {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  height: 55rem;
+  margin-right: 2.5rem;
+  margin-left: 2rem;
+  margin-bottom: 10rem;
+  border-radius: 5px;
+}
+#copy-HTML-button {
+  vertical-align: top;
+  background-color: #e2e2e2;
+}
